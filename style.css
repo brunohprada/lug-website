@@ -250,12 +250,16 @@ h6 {
 .navbar__logo-img {
   height: 44px;
   width: auto;
-  transition: height var(--transition-base), filter var(--transition-base);
+  transition: height var(--transition-base), filter var(--transition-base), opacity var(--transition-base);
   filter: brightness(0) invert(1);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .navbar--scrolled .navbar__logo-img {
   height: 36px;
+  opacity: 1;
+  pointer-events: all;
 }
 
 .navbar__menu {
@@ -355,7 +359,7 @@ h6 {
 }
 
 .hero__logo {
-  width: 220px;
+  width: 400px;
   margin: 0 auto var(--space-2xl);
   filter: brightness(0) invert(1) drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
 }
@@ -921,7 +925,7 @@ h6 {
 }
 
 .footer__logo {
-  height: 48px;
+  height: 80px;
   width: auto;
   margin-bottom: var(--space-lg);
   opacity: 0.9;
@@ -1179,7 +1183,7 @@ h6 {
 
   /* Hero */
   .hero__logo {
-    width: 160px;
+    width: 240px;
   }
 
   /* Sobre */
@@ -1236,7 +1240,7 @@ h6 {
   }
 
   .hero__logo {
-    width: 140px;
+    width: 200px;
   }
 
   .hero__cta {
