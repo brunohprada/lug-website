@@ -250,7 +250,8 @@ h6 {
 .navbar__logo-img {
   height: 44px;
   width: auto;
-  transition: height var(--transition-base);
+  transition: height var(--transition-base), filter var(--transition-base);
+  filter: brightness(0) invert(1);
 }
 
 .navbar--scrolled .navbar__logo-img {
@@ -356,7 +357,7 @@ h6 {
 .hero__logo {
   width: 220px;
   margin: 0 auto var(--space-2xl);
-  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+  filter: brightness(0) invert(1) drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
 }
 
 .hero__title {
@@ -924,6 +925,7 @@ h6 {
   width: auto;
   margin-bottom: var(--space-lg);
   opacity: 0.9;
+  filter: brightness(0) invert(1);
 }
 
 .footer__brand p {
