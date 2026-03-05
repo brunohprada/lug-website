@@ -66,7 +66,9 @@
 }
 
 /* ─── Reset ─── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -100,7 +102,12 @@ a {
   transition: color var(--transition-fast);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -333,12 +340,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(15, 29, 48, 0.92) 0%,
-    rgba(27, 46, 74, 0.88) 40%,
-    rgba(45, 95, 154, 0.82) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(15, 29, 48, 0.92) 0%,
+      rgba(27, 46, 74, 0.88) 40%,
+      rgba(45, 95, 154, 0.82) 100%);
 }
 
 .hero__content {
@@ -401,8 +406,70 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(8px);
+  }
+}
+
+/* ═══════════  PROBLEMAS  ═══════════ */
+.problemas {
+  padding: var(--space-3xl) 0;
+  background: linear-gradient(135deg, var(--c-navy-dark), var(--c-navy));
+  position: relative;
+}
+
+.problemas__content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.problemas__title {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 700;
+  color: var(--c-white);
+  margin-bottom: var(--space-xl);
+}
+
+.problemas__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  text-align: left;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.problemas__list li {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--c-orange);
+  transition: all var(--transition-fast);
+}
+
+.problemas__list li:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.problemas__cta {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--c-orange-light);
+  font-family: var(--font-heading);
 }
 
 /* ═══════════  SOBRE  ═══════════ */
@@ -946,9 +1013,17 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.reveal--delay-1 { transition-delay: 0.15s; }
-.reveal--delay-2 { transition-delay: 0.3s; }
-.reveal--delay-3 { transition-delay: 0.45s; }
+.reveal--delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal--delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal--delay-3 {
+  transition-delay: 0.45s;
+}
 
 /* ═══════════  RESPONSIVE  ═══════════ */
 
