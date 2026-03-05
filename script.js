@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('navMenu');
   const navLinks = document.querySelectorAll('.navbar__link');
   const whatsappFab = document.getElementById('whatsappFab');
+  const whatsappTooltip = document.getElementById('whatsappTooltip');
+  const tooltipClose = document.getElementById('tooltipClose');
   const contactForm = document.getElementById('contactForm');
   const revealElements = document.querySelectorAll('.reveal');
   const sections = document.querySelectorAll('section[id]');
@@ -57,6 +59,35 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll(); // Run once on load
 
+  // ─── WhatsApp Tooltip ───
+  let tooltipTimeout;
+  let tooltipDismissed = false;
+
+  function showTooltipAfterDelay() {
+    if (tooltipDismissed) return;
+    tooltipTimeout = setTimeout(() => {
+      if (whatsappTooltip && whatsappFab.classList.contains('visible')) {
+        whatsappTooltip.classList.add('visible');
+        // Auto-hide after 8 seconds
+        setTimeout(() => {
+          whatsappTooltip.classList.remove('visible');
+        }, 8000);
+      }
+    }, 4000);
+  }
+
+  showTooltipAfterDelay();
+
+  if (tooltipClose) {
+    tooltipClose.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      whatsappTooltip.classList.remove('visible');
+      tooltipDismissed = true;
+      clearTimeout(tooltipTimeout);
+    });
+  }
+
   // ─── Hamburger Menu ───
   const toggleMenu = () => {
     hamburger.classList.toggle('active');
@@ -87,13 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const target = document.querySelector(targetId);
       if (target) {
         e.preventDefault();
         const navHeight = navbar.offsetHeight;
         const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
@@ -126,10 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       const formData = new FormData(contactForm);
       const data = Object.fromEntries(formData);
-      
+
       // Create a nice formatted message for WhatsApp
       const serviceName = contactForm.querySelector('#servico option:checked').textContent;
       let whatsappMsg = `*Novo contato pelo site LuG Engenharia*\n\n`;
@@ -138,11 +169,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (data.telefone) whatsappMsg += `*Telefone:* ${data.telefone}\n`;
       if (data.servico) whatsappMsg += `*Serviço:* ${serviceName}\n`;
       whatsappMsg += `*Mensagem:* ${data.mensagem}`;
-      
+
       // Encode and open WhatsApp (replace number as needed)
-      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(whatsappMsg)}`;
+      const whatsappUrl = `https://wa.me/5511971497606?text=${encodeURIComponent(whatsappMsg)}`;
       window.open(whatsappUrl, '_blank');
-      
+
       // Show success feedback
       showToast('Mensagem preparada! Complete o envio pelo WhatsApp.');
       contactForm.reset();
