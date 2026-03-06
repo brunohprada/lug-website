@@ -1181,23 +1181,121 @@ h6 {
     padding: 12px 24px;
   }
 
-  /* Hero */
+  /* Hero — stack vertically */
+  .hero {
+    flex-direction: column;
+    min-height: auto;
+    padding-top: calc(var(--navbar-height) + var(--space-2xl));
+    padding-bottom: var(--space-2xl);
+  }
+
+  .hero__content {
+    padding: var(--space-lg);
+    max-width: 100%;
+  }
+
   .hero__logo {
-    width: 240px;
+    width: 250px;
+  }
+
+  .hero__title {
+    font-size: 1.6rem;
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+
+  /* Problemas — full width on mobile */
+  .problemas {
+    padding: var(--space-2xl) 0;
+    z-index: 2;
+  }
+
+  .problemas__content {
+    max-width: 100%;
+    padding: 0 var(--space-md);
+  }
+
+  .problemas__title {
+    font-size: 1.3rem;
+  }
+
+  .problemas__list {
+    max-width: 100%;
+  }
+
+  .problemas__list li {
+    font-size: 0.95rem;
+  }
+
+  .problemas__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .problemas__cta {
+    font-size: 1rem;
   }
 
   /* Sobre */
+  .sobre {
+    padding: var(--space-3xl) 0;
+  }
+
   .sobre__grid {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
   }
 
+  /* Section Headers */
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-header__title {
+    font-size: 1.5rem;
+  }
+
+  .section-header__desc {
+    font-size: 0.95rem;
+  }
+
   /* Services */
+  .servicos {
+    padding: var(--space-3xl) 0;
+  }
+
   .servicos__grid {
     grid-template-columns: 1fr;
   }
 
+  .servicos__cta-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .servicos__cta-banner p {
+    font-size: 1rem;
+  }
+
+  .servicos__cta-banner .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   /* Diferenciais */
+  .diferenciais {
+    padding: var(--space-3xl) 0;
+  }
+
   .diferenciais__grid {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -1218,6 +1316,10 @@ h6 {
   }
 
   /* Contato */
+  .contato {
+    padding: var(--space-3xl) 0;
+  }
+
   .contato__grid {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
@@ -1227,6 +1329,24 @@ h6 {
   .footer__grid {
     grid-template-columns: 1fr;
     gap: var(--space-2xl);
+    text-align: center;
+  }
+
+  .footer__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__links,
+  .footer__services {
+    text-align: center;
+  }
+
+  .footer__brand p {
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1236,25 +1356,20 @@ h6 {
   }
 
   .hero__content {
-    padding: var(--space-lg);
+    padding: var(--space-md);
   }
 
   .hero__logo {
     width: 200px;
   }
 
-  .hero__cta {
-    width: 100%;
-    justify-content: center;
+  .hero__title {
+    font-size: 1.4rem;
   }
 
   .btn {
     padding: 12px 24px;
     font-size: 0.9rem;
-  }
-
-  .servicos__grid {
-    grid-template-columns: 1fr;
   }
 
   .whatsapp-fab-wrapper {
@@ -1273,10 +1388,21 @@ h6 {
     font-size: 0.82rem;
   }
 
-  .servicos__cta-banner {
+  .stat-card {
     flex-direction: column;
     text-align: center;
-    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .stat-card__icon {
+    margin: 0 auto;
+  }
+
+  .contato__form {
+    padding: var(--space-xl);
+  }
+
+  .footer__logo {
+    height: 60px;
   }
 }
 
