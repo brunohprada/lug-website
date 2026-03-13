@@ -31,12 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.classList.remove('navbar--scrolled');
     }
 
-    // WhatsApp FAB visibility
-    if (scrollY > 400) {
-      whatsappFab.classList.add('visible');
-    } else {
-      whatsappFab.classList.remove('visible');
-    }
+    // CTA FAB is always visible (class set in HTML)
 
     // Active section highlight
     let current = '';
