@@ -1428,3 +1428,38 @@ h6 {
   opacity: 1;
   pointer-events: all;
 }
+
+/* ─── Feature Toggle Button ─── */
+.feature-toggle-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  background: rgba(15, 29, 48, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--c-white);
+  z-index: 9999;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+}
+
+.feature-toggle-btn:hover {
+  background: var(--c-orange);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+  color: var(--c-white);
+}
+
+.feature-toggle-btn svg {
+  width: 22px;
+  height: 22px;
+}

@@ -23,6 +23,14 @@
 
 <body>
 
+  <!-- ═══════════ FEATURE TOGGLE BTN ═══════════ -->
+  <a href="feature-toggles.html" class="feature-toggle-btn" aria-label="Acessar painel de Feature Toggles" title="Feature Toggles">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  </a>
+
   <!-- ═══════════ NAVBAR ═══════════ -->
   <header class="navbar" id="navbar">
     <div class="navbar__container">
@@ -157,7 +165,7 @@
         </h3>
         <div class="servicos__grid">
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-nr11">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="3" />
@@ -170,7 +178,7 @@
               armazenagem e manuseio de materiais.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-nr12">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -183,7 +191,7 @@
               equipamentos industriais.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-nr13">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -195,7 +203,7 @@
               tubulações conforme NR-13.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-playground">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -207,7 +215,7 @@
               e áreas de lazer.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-pmoc">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -219,7 +227,7 @@
               de climatização.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-geradores">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -230,7 +238,7 @@
               segura e conforme.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-elevadores">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
@@ -241,7 +249,7 @@
               normas ABNT.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-exaustao">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -254,7 +262,7 @@
             </p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-gas">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -267,7 +275,7 @@
               gás.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-maquinas">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -279,7 +287,7 @@
               industrial.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-andaimes">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M4 6h16M4 10h16M4 14h16M4 18h16" />
@@ -290,7 +298,7 @@
               predial.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-veicular">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
@@ -305,7 +313,7 @@
       </div>
 
       <!-- CTA Intermediário -->
-      <div class="servicos__cta-banner reveal">
+      <div class="servicos__cta-banner reveal" data-toggle-id="cta-banner">
         <p>Precisa regularizar algum desses equipamentos?</p>
         <a href="https://wa.me/5511971497606?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20laudo%20técnico."
           target="_blank" class="btn btn--primary">
@@ -328,7 +336,7 @@
         </h3>
         <div class="servicos__grid">
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-avcb">
             <div class="service-card__icon service-card__icon--accent">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -340,7 +348,7 @@
               Licenciamento do Corpo de Bombeiros.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-linha-vida">
             <div class="service-card__icon service-card__icon--accent">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -352,7 +360,7 @@
               altura.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-ancoragem">
             <div class="service-card__icon service-card__icon--accent">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3m-1 5h10" />
@@ -377,7 +385,7 @@
         </h3>
         <div class="servicos__grid">
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-rt">
             <div class="service-card__icon service-card__icon--dark">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -389,7 +397,7 @@
               empresa.</p>
           </div>
 
-          <div class="service-card reveal">
+          <div class="service-card reveal" data-toggle-id="servico-pericia">
             <div class="service-card__icon service-card__icon--dark">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path
@@ -417,7 +425,7 @@
       </div>
       <div class="diferenciais__grid">
 
-        <div class="diferencial-card reveal">
+        <div class="diferencial-card reveal" data-toggle-id="diferencial-abnt">
           <div class="diferencial-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path
@@ -428,7 +436,7 @@
           <p>Todos os serviços seguem as normas técnicas da ABNT e legislações vigentes aplicáveis.</p>
         </div>
 
-        <div class="diferencial-card reveal reveal--delay-1">
+        <div class="diferencial-card reveal reveal--delay-1" data-toggle-id="diferencial-art">
           <div class="diferencial-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path
@@ -439,7 +447,7 @@
           <p>Anotação de Responsabilidade Técnica emitida para todos os serviços prestados.</p>
         </div>
 
-        <div class="diferencial-card reveal reveal--delay-2">
+        <div class="diferencial-card reveal reveal--delay-2" data-toggle-id="diferencial-equipe">
           <div class="diferencial-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path
@@ -450,7 +458,7 @@
           <p>Profissionais habilitados e registrados, com experiência comprovada no setor.</p>
         </div>
 
-        <div class="diferencial-card reveal reveal--delay-3">
+        <div class="diferencial-card reveal reveal--delay-3" data-toggle-id="diferencial-agil">
           <div class="diferencial-card__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -607,6 +615,7 @@
     </a>
   </div>
 
+  <script src="toggle-apply.js"></script>
   <script src="script.js"></script>
 </body>
 
